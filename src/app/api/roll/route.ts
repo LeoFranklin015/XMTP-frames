@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
           <meta name="of:button:1" content="Try again 💪" />
           <meta name="of:button:1:action" content="post_redirect" />
           <meta name="of:button:1:target" content="https://xmtp-frames.vercel.app/" />
-          <meta name="of:button:2" content="mess:${message}" />
+          <meta name="of:button:2" content="source code" />
           <meta name="of:button:2:action" content="link" />
           <meta name="of:button:2:target" content="https://github.com/LeoFranklin015/XMTP-frames" />
 
@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
           <meta name="fc:frame:button:1" content="Try again 💪" />
           <meta name="fc:frame:button:1:action" content="post" />
           <meta name="fc:frame:button:1:target" content="https://xmtp-frames.vercel.app/" />
-          <meta name="fc:frame:button:2" content="mess:${message}" />
+          <meta name="fc:frame:button:2" content="source code" />
           <meta name="fc:frame:button:2:action" content="link" />
           <meta name="fc:frame:button:2:target" content="https://github.com/LeoFranklin015/XMTP-frames" />
         </head>
@@ -86,7 +86,7 @@ export async function POST(req: NextRequest) {
           <meta name="of:button:1" content="Try again 💪" />
           <meta name="of:button:1:action" content="post" />
           <meta name="of:button:1:target" content="https://xmtp-frames.vercel.app/" />
-          <meta name="of:button:2" content="mess:${message}" />
+          <meta name="of:button:2" content="source code" />
           <meta name="of:button:2:action" content="link" />
           <meta name="of:button:2:target" content="https://github.com/LeoFranklin015/XMTP-frames" />
 
