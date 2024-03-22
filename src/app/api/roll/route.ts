@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
           <meta name= "of:image" content="${imageUrl}" />
           <meta name="of:button:1" content="Try again 💪" />
           <meta name="of:button:1:action" content="post" />
-          <meta name="of:button:1:target" content="${postUrl}" />
+          <meta name="of:button:1:target" content="${postUrl}/" />
           <meta name="of:button:2" content="mess:${message}" />
           <meta name="of:button:2:action" content="link" />
           <meta name="of:button:2:target" content="https://github.com/LeoFranklin015/XMTP-frames" />
@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
           <meta name= "of:image" content="${imageUrl}" />
           <meta name="of:button:1" content="Try again 💪" />
           <meta name="of:button:1:action" content="post" />
-          <meta name="of:button:1:target" content="${postUrl}" />
+          <meta name="of:button:1:target" content="${postUrl}/" />
           <meta name="of:button:2" content="mess:${message}" />
           <meta name="of:button:2:action" content="link" />
           <meta name="of:button:2:target" content="https://github.com/LeoFranklin015/XMTP-frames" />
