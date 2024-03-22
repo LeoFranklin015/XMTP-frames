@@ -32,14 +32,14 @@ export async function GET() {
         >
           <div
             style={{
-              fontSize: 38,
+              fontSize: 128,
             }}
           >
             Roll the dice 🎲
           </div>
           <div
             style={{
-              fontSize: 24,
+              fontSize: 96,
             }}
           >
             If the dice matches, you win; otherwise, you lose.

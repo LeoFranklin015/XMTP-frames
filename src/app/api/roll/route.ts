@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
           <meta name= "of:post_url" content="${postUrl}" />
           <meta name= "of:image" content="${imageUrl}" />
           <meta name="of:button:1" content="Try again 💪" />
-          <meta name="of:button:1:action" content="post" />
+          <meta name="of:button:1:action" content="post_redirect" />
           <meta name="of:button:1:target" content="https://xmtp-frames.vercel.app/" />
           <meta name="of:button:2" content="mess:${message}" />
           <meta name="of:button:2:action" content="link" />
