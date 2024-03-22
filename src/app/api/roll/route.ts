@@ -24,6 +24,12 @@ export async function POST(req: NextRequest) {
     }
 
     const message = inputText || "no";
+    const randomNumber = Math.floor(Math.random() * 6) + 1;
+    if (randomNumber.toString() === message) {
+      const imageUrl = `${NEXT_PUBLIC_URL}/api/images/win`;
+    } else {
+      const imageUrl = `${NEXT_PUBLIC_URL}/api/images/lose`;
+    }
     const imageUrl = `${NEXT_PUBLIC_URL}/api/images/start`;
     return new NextResponse(
       `<!DOCTYPE html>
