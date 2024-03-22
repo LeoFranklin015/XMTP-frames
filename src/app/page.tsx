@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Xmtp from "@/app/components/Xmtp";
 import { NEXT_PUBLIC_URL } from "@/config";
 
-const postUrl = `${NEXT_PUBLIC_URL}/api/roll`;
+const postUrl = `${NEXT_PUBLIC_URL}/api/tryagain`;
 
 export async function generateMetadata(): Promise<Metadata> {
   const imageUrl = `${NEXT_PUBLIC_URL}/api/images/start`;
