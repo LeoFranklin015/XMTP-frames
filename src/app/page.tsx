@@ -14,6 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
       images: [imageUrl],
     },
     other: {
+      //open frames
       "of:version": "vNext",
       "of:accepts:farcaster": "vNext",
       "of:accepts:xmtp": "2024-02-01",
@@ -23,6 +24,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "of:button:1": "Roll 🎲",
       "of:button:1:action": "post",
       "of:button:1:target": postUrl,
+
+      //frames
       "fc:frame": "vNext",
       "fc:frame:image": imageUrl,
       "fc:frame:post_url": postUrl,
