@@ -5,7 +5,7 @@ import { NEXT_PUBLIC_URL, HUB_URL } from "@/config";
 const postUrl = `${NEXT_PUBLIC_URL}/api/roll`;
 const imageUrl = `${NEXT_PUBLIC_URL}/api/images/start`;
 
-export async function POST(req: NextRequest) {
+async function getResponse(req: NextRequest): Promise<NextResponse> {
   const {
     untrustedData: { inputText },
     trustedData: { messageBytes },
@@ -53,4 +53,6 @@ export async function POST(req: NextRequest) {
   );
 }
 // }
-export const GET = POST;
+export async function POST(req: NextRequest): Promise<Response> {
+  return getResponse(req);
+}
