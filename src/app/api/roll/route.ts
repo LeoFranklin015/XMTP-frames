@@ -2,10 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSSLHubRpcClient, Message } from "@farcaster/hub-nodejs";
 import { NEXT_PUBLIC_URL, HUB_URL } from "@/config";
 
-const HUB_URL1 = HUB_URL || "nemes.farcaster.xyz:2283";
+const HUB_URL1 = HUB_URL || "";
 const hubClient = getSSLHubRpcClient(HUB_URL1);
 
-const postUrl = `${process.env["HOST"]}/api/code`;
+const postUrl = `${NEXT_PUBLIC_URL}`;
 
 export async function POST(req: NextRequest) {
   const {
@@ -37,11 +37,11 @@ export async function POST(req: NextRequest) {
           <meta name="fc:frame" content="vNext" />
           <meta name="fc:frame:post_url" content="${postUrl}" />
           <meta name="fc:frame:image" content="${imageUrl}" />
-          <meta name="fc:frame:button:1" content="See code" />
+          <meta name="fc:frame:button:1" content="Try again 💪" />
           <meta name="fc:frame:button:1:action" content="post_redirect" />
           <meta name="fc:frame:button:2" content="mess:${message}" />
           <meta name="fc:frame:button:2:action" content="link" />
-          <meta name="fc:frame:button:2:target" content="https://github.com/horsefacts/echo-the-dolphin" />
+          <meta name="fc:frame:button:2:target" content="https://github.com/LeoFranklin015/XMTP-frames" />
         </head>
         <body/>
       </html>`,
@@ -64,11 +64,11 @@ export async function POST(req: NextRequest) {
           <meta name="fc:frame" content="vNext" />
           <meta name="fc:frame:post_url" content="${postUrl}" />
           <meta name="fc:frame:image" content="${imageUrl}" />
-          <meta name="fc:frame:button:1" content="See code" />
+          <meta name="fc:frame:button:1" content="Try again 💪" />
           <meta name="fc:frame:button:1:action" content="post_redirect" />
           <meta name="fc:frame:button:2" content="mess:${message}" />
           <meta name="fc:frame:button:2:action" content="link" />
-          <meta name="fc:frame:button:2:target" content="https://github.com/horsefacts/echo-the-dolphin" />
+          <meta name="fc:frame:button:2:target" content="https://github.com/LeoFranklin015/XMTP-frames" />
         </head>
         <body/>
       </html>`,
