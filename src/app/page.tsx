@@ -19,6 +19,8 @@ export async function generateMetadata(): Promise<Metadata> {
       "fc:frame:post_url": postUrl,
       "fc:frame:input:text": "Enter 1-6",
       "fc:frame:button:1": "Roll 🎲",
+      "fc:frame:button:1:action": "post",
+      "fc:frame:button:1:target": postUrl,
     },
   };
 }
