@@ -27,12 +27,8 @@ export async function POST(req: NextRequest) {
     const randomNumber = Math.floor(Math.random() * 6) + 1;
     if (randomNumber.toString() === message) {
       const imageUrl = `${NEXT_PUBLIC_URL}/api/images/win`;
-    } else {
-      const imageUrl = `${NEXT_PUBLIC_URL}/api/images/lose`;
-    }
-    const imageUrl = `${NEXT_PUBLIC_URL}/api/images/start`;
-    return new NextResponse(
-      `<!DOCTYPE html>
+      return new NextResponse(
+        `<!DOCTYPE html>
       <html>
         <head>
           <title>Echo Says:</title>
@@ -49,13 +45,41 @@ export async function POST(req: NextRequest) {
         </head>
         <body/>
       </html>`,
-      {
-        status: 200,
-        headers: {
-          "Content-Type": "text/html",
-        },
-      }
-    );
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "text/html",
+          },
+        }
+      );
+    } else {
+      const imageUrl = `${NEXT_PUBLIC_URL}/api/images/lose`;
+      return new NextResponse(
+        `<!DOCTYPE html>
+      <html>
+        <head>
+          <title>Echo Says:</title>
+          <meta property="og:title" content="Echo Says:" />
+          <meta property="og:image" content="${imageUrl}" />
+          <meta name="fc:frame" content="vNext" />
+          <meta name="fc:frame:post_url" content="${postUrl}" />
+          <meta name="fc:frame:image" content="${imageUrl}" />
+          <meta name="fc:frame:button:1" content="See code" />
+          <meta name="fc:frame:button:1:action" content="post_redirect" />
+          <meta name="fc:frame:button:2" content="mess:${message}" />
+          <meta name="fc:frame:button:2:action" content="link" />
+          <meta name="fc:frame:button:2:target" content="https://github.com/horsefacts/echo-the-dolphin" />
+        </head>
+        <body/>
+      </html>`,
+        {
+          status: 200,
+          headers: {
+            "Content-Type": "text/html",
+          },
+        }
+      );
+    }
   }
 }
 export const GET = POST;
