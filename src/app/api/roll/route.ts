@@ -23,12 +23,12 @@ export async function POST(req: NextRequest) {
   //     return new NextResponse("Bad Request", { status: 400 });
   //   }
 
-    const message = inputText || "no";
-    const randomNumber = Math.floor(Math.random() * 6) + 1;
-    if (randomNumber.toString() === message) {
-      const imageUrl = `${NEXT_PUBLIC_URL}/api/images/win`;
-      return new NextResponse(
-        `<!DOCTYPE html>
+  const message = inputText || "no";
+  const randomNumber = Math.floor(Math.random() * 6) + 1;
+  if (randomNumber.toString() === message) {
+    const imageUrl = `${NEXT_PUBLIC_URL}/api/images/win`;
+    return new NextResponse(
+      `<!DOCTYPE html>
       <html>
         <head>
           <title>Echo Says:</title>
@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
           <meta name= "of:image" content="${imageUrl}" />
           <meta name="of:button:1" content="Try again 💪" />
           <meta name="of:button:1:action" content="post_redirect" />
-          <meta name="of:button:1:target" content="https://xmtp-frames.vercel.app/" />
+          <meta name="of:button:1:target" content="https://xmtp-frames.vercel.app/api/roll" />
           <meta name="of:button:2" content="source code" />
           <meta name="of:button:2:action" content="link" />
           <meta name="of:button:2:target" content="https://github.com/LeoFranklin015/XMTP-frames" />
@@ -61,17 +61,17 @@ export async function POST(req: NextRequest) {
         </head>
         <body/>
       </html>`,
-        {
-          status: 200,
-          headers: {
-            "Content-Type": "text/html",
-          },
-        }
-      );
-    } else {
-      const imageUrl = `${NEXT_PUBLIC_URL}/api/images/lose`;
-      return new NextResponse(
-        `<!DOCTYPE html>
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "text/html",
+        },
+      }
+    );
+  } else {
+    const imageUrl = `${NEXT_PUBLIC_URL}/api/images/lose`;
+    return new NextResponse(
+      `<!DOCTYPE html>
       <html>
         <head>
           <title>Echo Says:</title>
@@ -85,7 +85,7 @@ export async function POST(req: NextRequest) {
           <meta name= "of:image" content="${imageUrl}" />
           <meta name="of:button:1" content="Try again 💪" />
           <meta name="of:button:1:action" content="post" />
-          <meta name="of:button:1:target" content="https://xmtp-frames.vercel.app/" />
+          <meta name="of:button:1:target" content="https://xmtp-frames.vercel.app/api/roll" />
           <meta name="of:button:2" content="source code" />
           <meta name="of:button:2:action" content="link" />
           <meta name="of:button:2:target" content="https://github.com/LeoFranklin015/XMTP-frames" />
@@ -103,14 +103,14 @@ export async function POST(req: NextRequest) {
         </head>
         <body/>
       </html>`,
-        {
-          status: 200,
-          headers: {
-            "Content-Type": "text/html",
-          },
-        }
-      );
-    }
+      {
+        status: 200,
+        headers: {
+          "Content-Type": "text/html",
+        },
+      }
+    );
   }
+}
 // }
 export const GET = POST;
