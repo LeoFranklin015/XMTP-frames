@@ -1,6 +1,6 @@
 # RollTheDice
 
-![Dice Placeholder]((https://github.com/LeoFranklin015/XMTP-frames/blob/main/images/Screenshot%20(3).png))
+![Dice Placeholder]((https://github.com/LeoFranklin015/XMTP-frames/blob/main/images/Screenshot%20(3).png?raw=true)))
 
 ## Description
 RollTheDice is a frame built using open frame meta tags. It is also compatible with Farcaster frames.
